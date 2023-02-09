@@ -1,0 +1,81 @@
+Simple Hotel Kiosk
+
+1.Open with the Homepage-->                          homepage.html
+2.The Homepage is having 3 options
+  .Checkin
+  .Walkin
+  .Checkout
+
+
+
+
+//checkin//
+3.Checkin:                                           bookingcode.html
+ use Booking Code: AB123456(sample customer code)
+ Only accepts Code with the above pattern 
+4. Customer page with the given booking code--      checkin_verifydetails.html
+5.Customer check the details and then Press Proceed
+6.Then customer is taken to a page where they verify themselves with the registered Mobile number
+                                                     verifyid_checkin.html
+7. Enter Mobile number- 8 digit mobile Number-12345678
+8.In the Same page once the customer verify- The screen shows the Room number and then click Print keycode to get keycode to enter 
+for the room door to open.
+//Done with checkin//
+
+
+
+
+
+  
+//Walkin//
+9.walkin-                                            walkin.html
+ Here we find the checkin date and check hotel policies/agreement for the customers to go through
+click Agree & Accept.
+
+10.Then we enter to a page where customer have the oppurtunity to select the available rooms.    selectroompage.html
+11.There are two rooms available in this hotel : Standard and Deluxe
+12.once the customer select standard, they go the page where the pics of the room and other details available like price   standard.html
+13. Customer enter name, checkin and checkout days , number of guests for the room,and contact number-(3 digit country code-8 digit number)
+    customer can also check the amount for the number of days they stay, by selecting number of days from dropdown and click amount to Pay.
+     Gave Pay by Card option here
+14. Customer goes to checkin payment page                                                   booking.html
+.    Enter the card details with patterns same as placeholders. credit card number(16 digit, no hyphen 1111222233334444)
+then confirm payment.
+15. Upon successful payment                                                                     paymentsuccessfulBooking.html
+ Customer get Booking code, Room number and press Print Key code for Room Keycode.And then home button.
+
+
+
+
+//Checkout//
+
+16. Checkout                                                              checkout-login.html
+17. Customer enter their Booking Code    (sample code:AB123456) for Checkout. Press Checkout.
+
+18. Customer  get  their Booking details and amount to pay in this page         checkout.html          
+19. Customer check the details and make their blance payments with 2 options
+  . Payby cash                                                                   paybycash.html
+  .Pay by card                                                                   creditcard.html
+20. Upon successfull card payment they go to Payment succesful page for confirmation                    paymentsuccessful.html
+21. Press home button to go to homepage.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

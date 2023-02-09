@@ -1,0 +1,57 @@
+html, body {
+    min-height: 100%;
+}
+body{
+background-image: url(sky.png);
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+#time{
+    color:rgb(21, 255, 0);
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: large;
+    background-color: rgba(35, 34, 34, 0.669);
+    border-radius: 14px;
+    padding:10px 10px;
+}
+.header{
+     overflow: hidden;
+
+       }
+
+.header logo{
+    padding: 14px 16px;
+    text-decoration: none;
+     font-size: 17px;
+    }
+h2 , p {
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.checkindate {
+background-color: rgb(106, 151, 7);
+display: flex;
+margin: auto;
+width:max-content;
+border-radius: 14px;
+text-align: center;
+padding:20px 20px;
+}
+#terms {
+  margin:auto;
+  display: flex;
+}
+.btn {
+    margin:auto;
+    display: flex;
+    padding:10px 20px;
+    background-color: goldenrod;
+    border: none;
+    border-radius: 16px;
+    color: aliceblue;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 24px;
+}

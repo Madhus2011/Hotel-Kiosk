@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Details Check-In</title>
+    <link rel="stylesheet" href="verifydetails_styles.css">
+    </head>
+    <body>
+        <div class="header">
+            <div id='time' style="float:left">
+            </div>
+            <h3 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;float:right;color: white;"><img src="crown.png" style="width:30px; height:30px"/>Hilton Hotels</h3>
+        </div>
+        
+        <table style="width:90%;">
+             <!--First row with image and name of customer -->
+        <tr>
+            <td>
+                <img src="checkin.jpg" width="400px" height="300px" >
+            </td>
+            <td style="color:white;float: right; text-align: center;">
+                <p>Welcome</p>
+                <h2>Ms. Elizabeth Rae</h2>
+                <img src="user.png">
+                <p>Please find your Booking Details below</p>
+                <p>Hope you have a pleasant stay at Hilton Hotels.</p>
+               
+            </td>
+            </tr>
+            </table>
+            
+        <table style="width:100%; line-height:2px;" >
+        <tr style="color:white; background-color:#00adf4; text-align: center;">
+          <td>
+            <h5>FullName</h5>
+            <p>Elizabeth Rae</p>
+        </td>
+        <td>
+            <h5>Arrival Date</h5>
+            <p>02/02/2022</p>
+        </td>
+        <td>
+            <h5>Departure Date</h5>
+            <p>09/02/2022</p>
+        </td>
+        </tr>
+        <!--End of Second Row-->
+        <tr style="color:white; background-color:#00adf4; text-align: center;">
+            <td>
+              <h5>Room Type</h5>
+              <p>Standard</p>
+          </td>
+          <td>
+              <h5>Guest per room</h5>
+              <p>2 Adult 0 child</p>
+          </td>
+          <td>
+              <h5>Breakfast</h5>
+              <p>Included</p>
+          </td>
+          </tr>
+        </table>
+        <button type="button" class="btn" onclick="proceed()" >Proceed</button> 
+     
+       <script src="datetime.js">
+       </script>
+       <script>
+        function proceed() {
+            window.location.href='verifyid_checkin.html';
+        }
+       </script>
+       </body>
+       </html>

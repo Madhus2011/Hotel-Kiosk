@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width , initial-scale=1.0">
+        <title>VerifyId After CheckIN</title>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <link rel="stylesheet" href="verifyid_checkin.css"/>
+    </head>
+    <body>
+        <!--Time and logo-->
+        <div class="header">
+            <div id='time' style="float:left">
+            </div>
+            <h3 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;float:right;"><img src="crown.png" style="width:30px; height:30px"/>Hilton Hotels</h3>
+        </div>
+        <!--Container-->
+        <form id="regForm" action="index.html">
+            <!-- One "tab" for each step in the form: -->
+            <div class="tab"><center>Verify your ID</center>
+              <p><input type="tel"placeholder="Enter your Mobile Number"  pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"  oninput="this.className = ''" name="phone" required></p>
+            </div>
+            <div class="tab">
+          <center><input type="text" value="Room No:5031">
+          <br><br>
+          <button type="button" id="value" class="btn"  onclick="document.getElementById('value').innerHTML = getRndInteger(1000,9999);disablebtn()" > PRINT KEY CODE </button></center>
+              <br>
+            </div>
+            <div style="overflow:auto;">
+              <div style="float:right;">
+              
+                <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+              
+              </div>
+            </div>
+              <!-- Circles which indicates the steps of the form: -->
+            <div style="text-align:center;margin-top:40px;">
+              <span class="step"></span>
+              <span class="step"></span>
+            </div>
+          </form>
+ <script src="verifyid_checkin.js"></script>
+    </body>
+    </html>
+            

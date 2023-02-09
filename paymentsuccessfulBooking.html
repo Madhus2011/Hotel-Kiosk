@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Booking successful </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  background-image: url('paymentsuccessful.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+    img{
+        height:200px;
+        margin-left:auto;
+        margin-right:auto;
+        display:block;
+    }
+    div{
+        text-align: center;
+        display:block;  
+    }
+    h2,p {
+        font-family: monospace;
+        font-size: 20px;
+        color: white;
+    }
+    button{
+        padding: 20px 20px;
+        background-color: rgb(200, 215, 37);
+        border: none;
+        border-radius: 14px;
+    }
+</style>
+</head>
+<body>
+<img src="spirit.png">
+<div>
+<h2>Your Payment is Successful</h2>
+<p>Thank you for your payment. An automated payment receipt will be sent to your registered email.</p>
+<!--Booking Code , Display Room Number and Key Code-->
+<p>Your Booking Code : AB<span id="booking-code"></span></p>
+
+<p>Your Room Number : <span id="room-number"></span></p>
+
+<button type="button" id="value" onclick="document.getElementById('value').innerHTML = getRndInteger(1000,9999);this.onclick=null;" > <b>PRINT KEY CODE </b></button></center>
+<br><br>
+<!--Go abck to Home Page-->
+<a href="index.html"><img src="home.png"style="height:50px; width:50px;"></a>
+</div>
+<script>
+document.getElementById("booking-code").innerHTML =
+Math.floor(Math.random() * 100000);
+
+document.getElementById("room-number").innerHTML =
+Math.floor(Math.random() * 6000);
+
+
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+</script>
+</body>
+</html>

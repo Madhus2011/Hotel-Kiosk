@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Standard Room</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="standard.css">
+</head>
+<body>
+    <div class="header">
+		<div id='time' style="float:left">
+		</div>
+		<h3 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;float:right; color: white;"><img src="crown.png" style="width:30px; height:30px"/>Hilton Hotels</h3>
+	</div>
+	
+	<div class="slideshow-container">
+
+		<div class="mySlides fade">
+		  <div class="numbertext">1 / 3</div>
+		  <img src="checkin.jpg" style="width:100%; height:300px;">
+		  <div class="text">Standard Room</div>
+		</div>
+		
+		<div class="mySlides fade">
+		  <div class="numbertext">2 / 3</div>
+		  <img src="standard2.jpg" style="width:100%; height:300px;">
+		  <div class="text">Queen Bed</div>
+		</div>
+		
+		<div class="mySlides fade">
+		  <div class="numbertext">3 / 3</div>
+		  <img src="standard 3.jpg" style="width:100%; height:300px;">
+		  <div class="text">Living Area + Bedroom</div>
+		</div>
+		
+		<a class="prev" onclick="plusSlides(-1)">❮</a>
+		<a class="next" onclick="plusSlides(1)">❯</a>
+		
+		</div>
+		<br>
+		
+		<div style="text-align:center">
+		  <span class="dot" onclick="currentSlide(1)"></span> 
+		  <span class="dot" onclick="currentSlide(2)"></span> 
+		  <span class="dot" onclick="currentSlide(3)"></span> 
+		</div>
+		<div class="booking-container" style="">
+			<h2>Standard Room &nbsp;$85/Night</h2>
+			
+		<form action="booking.html">
+			<label>Check-IN </label>
+			<input type="date" id="e" readonly>
+			<br><br>
+			<div>
+			
+				Price per Night(in $)<br>
+				<input id="num1" type="text" name="num1" value="85"><br><br>
+				Number of Days of Stay<br>
+				<input id="num2" type="number" name="num2" min="1" max="7" placeholder="Days"required>
+				<br>
+				<br>
+				<input type="button" class="btn" value="Amount To Pay"  onclick="calculate()" />
+			  </div>
+			  <p id="amount" style="background-color:rgb(120, 211, 9); color:white;width:fit-content; padding: 5PX 5PX;border-radius: 16px;">$
+			  </p>
+			</form>
+			</div>
+		     <form action="booking.html">
+		    <table class="details">
+				<tr>
+					<td>
+						<label for="fname">FullName</label>
+						<input type="text" name="fname" required>
+					</td>
+					<td>
+						<label for="checkin">Check-IN </label>
+			            <input type="date" name="checkin"required>
+					</td>
+					<td>
+						<label for="checkout">Check-Out Date</label>
+						<input type="date" required>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="room">Room Type</label>
+						<input type="text" value="Standard" readonly>
+					</td>
+					<td>
+						<label for ="adult">Adult</label>
+						<input type="number" value="1" min="1" max="3">
+						<label for ="adult">Child </label>
+						<input type="number" min="0" max="2">
+					</td>
+					<td>
+						<label for="contact">Contact Number</label>
+                        <input type="tel" pattern="[0-9]{3}-[0-9]{8}" placeholder="000-12345678" required >
+					</td>
+				</tr>
+			</table>
+				
+			<input type="submit" class="btn" Value="Pay By Card" style="position:absolute;bottom:0px;">      
+			  
+		</form>
+					<script>
+			function calculate() {
+             var numOne = document.getElementById('num1').value;
+             var numTwo = document.getElementById('num2').value;
+             var amount = parseInt(numOne) * parseInt(numTwo);
+             var p = document.getElementById('amount');
+             p.innerHTML += amount;
+}
+
+		</script>
+		<script>
+			document.getElementById('e').value = new Date().toISOString().substring(0 , 10);
+		</script>
+		<script src="datetime.js"></script>
+		<script>
+		let slideIndex = 1;
+		showSlides(slideIndex);
+		
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+		
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+		
+		function showSlides(n) {
+		  let i;
+		  let slides = document.getElementsByClassName("mySlides");
+		  if (n > slides.length) {slideIndex = 1}    
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";  
+		  }
+		 
+		  slides[slideIndex-1].style.display = "block";  
+		
+		}
+		</script>
+	
+		  
+		  
+	
+	</body>
+	</html>
+		

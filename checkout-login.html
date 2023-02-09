@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Booking Code </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+ body{
+    background-color: blueviolet;
+    margin:20px 20px;
+    box-sizing: border-box;
+    }
+#time{
+    color:rgb(21, 255, 0);
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: large;
+    background-color: rgba(35, 34, 34, 0.669);
+    border-radius: 14px;
+    padding:20px 20px;
+    }
+.header{
+    overflow: hidden;
+    }
+
+.header logo{
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    }
+.booking {
+    background-color: black;
+    opacity:0.7;
+    width:400px;
+    height:250px;
+    margin: 50px auto;
+    border-radius: 14px;
+    box-shadow: 5px 10px 8px 10px #340c92;
+ }
+ form{
+    text-align:center;
+    display:flex;
+    padding: 30px 90px;
+    }
+
+.btn  {
+    margin:auto 170px;
+    padding:20px;
+    text-align:center;
+    border-radius: 20%;
+    border:none;
+    display: flex;
+    }
+
+.btn:hover{
+    background-color: rgb(233, 7, 154);
+    }
+p{
+    margin:auto 170px;
+    padding:20px;
+    text-align:center;
+}
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+</style>
+</head>
+<body>
+    <body>
+        <div class="header">
+<div id='time' style="float:left">
+</div>
+<h3 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;float:right;"><img src="crown.png" style="width:30px; height:30px"/>Hilton Hotels</h3>
+</div>
+
+<!--Booking Code container-->
+<div class="booking" id="bookingform">
+    <form action="checkout.html" method="get" id="form1">
+          <input type="text" pattern="[0-9A-Z]{8}"placeholder="Booking Code ex:AB123456" style="padding:20px; width:200px;font-size: 16px;" required>
+    </form>
+  <button class="btn" type="submit"  form="form1" style="background-color: rgb(228, 206, 4);box-shadow: 2px 2px 2px 2px rgb(187, 111, 24);"><img src="man.png" style="width:40px; height:40px"></button>
+  <p style="color:white">CheckOut</p>
+</div>
+
+<!--Buttons -->
+<div style="overflow-x:auto;">
+<table class="center">
+<tr>
+<td><button class="btn" type="button" onclick="homepage()"><img src="close.png"></button></td>
+<td><button class="btn" type="button" onclick="playAudio()"><img src="customer-service.png" style="width:50px; height:50px"></button></td>
+</tr>
+</table>
+</div>
+<audio id="myAudio">
+    <source src="needhelp.mp3" type="audio/mpeg">
+</audio>
+
+<script src="datetime.js"></script>
+<script>
+    function homepage()
+    {
+    window.location.href = "index.html";
+    }
+</script>
+<script>
+    var x = document.getElementById("myAudio"); 
+    
+    function playAudio()
+     { 
+      x.play(); 
+    } 
+    </script>
+</body>
+</html>
